@@ -1,0 +1,130 @@
+:root {
+  --forest: #173f2b;
+  --olive: #6d8a50;
+  --olive-text: #526c3b;
+  --cream: #f7f5ed;
+  --gold: #d6ad69;
+  --text-muted: #5b655b;
+  --border: #d9ddce;
+  --font-body: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-editorial: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--forest);
+  background: var(--cream);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+a,
+summary {
+  touch-action: manipulation;
+}
+
+::selection {
+  color: var(--forest);
+  background: var(--gold);
+}
+
+:focus-visible {
+  outline: 3px solid var(--olive-text);
+  outline-offset: 5px;
+}
+
+main:focus {
+  outline: none;
+}
+
+.container {
+  width: min(100% - 2.5rem, 85rem);
+  margin-inline: auto;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.375rem;
+  padding: 0.875rem 1.5rem;
+  border: 1px solid transparent;
+  border-radius: 0.1875rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 160ms ease, border-color 160ms ease;
+}
+
+.button-primary {
+  color: var(--cream);
+  background: var(--forest);
+  border-color: var(--forest);
+}
+
+.button-primary:hover {
+  background: #28553c;
+  border-color: #28553c;
+}
+
+.button-secondary {
+  color: var(--forest);
+  border-color: #a6b19b;
+  background: transparent;
+}
+
+.button-secondary:hover {
+  background: #e9eddf;
+  border-color: var(--forest);
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 10;
+  top: 1rem;
+  left: 1rem;
+  padding: 1rem;
+  color: var(--cream);
+  background: var(--forest);
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+@media (min-width: 48rem) {
+  .container {
+    width: min(100% - 5rem, 85rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+}

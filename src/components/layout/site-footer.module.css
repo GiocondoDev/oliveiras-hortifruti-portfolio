@@ -1,0 +1,167 @@
+.footer {
+  padding-top: 2.75rem;
+  color: var(--cream);
+  background: var(--forest);
+}
+
+.footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer a:focus-visible {
+  outline-color: var(--gold);
+}
+
+.content {
+  display: grid;
+  gap: 2rem;
+  padding-bottom: 2.25rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.875rem;
+  max-width: 100%;
+}
+
+.logo {
+  display: block;
+  flex: none;
+  width: 2.75rem;
+  aspect-ratio: 499 / 510;
+  background: var(--cream);
+  mask: url("/oliveiras-logo-forest.webp") center / contain no-repeat;
+}
+
+.brandName {
+  font-size: 1.375rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.06em;
+}
+
+.brandName > span {
+  margin-left: 0.4rem;
+  font-weight: 400;
+}
+
+.description {
+  max-width: 22rem;
+  margin: 1rem 0 0;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+}
+
+.label {
+  margin: 0 0 0.875rem;
+  color: var(--gold);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.navigation ul {
+  display: grid;
+  gap: 0.125rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.navigation a:hover,
+.contact a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+}
+
+.contact p {
+  max-width: 22rem;
+  margin: 0 0 0.75rem;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+}
+
+.contact a {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding-block: 0.375rem;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+}
+
+.newTab {
+  font-size: 0.8125rem;
+}
+
+.bottomBar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem 2rem;
+  padding-block: 1.25rem;
+  border-top: 1px solid rgb(109 138 80 / 50%);
+}
+
+.bottomBar a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  font-size: 0.8125rem;
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+}
+
+.bottomBar p {
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 23rem) {
+  .brandName > span {
+    display: block;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 40rem) {
+  .content {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem 3rem;
+  }
+
+  .brandBlock {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 64rem) {
+  .footer {
+    padding-top: 3rem;
+  }
+
+  .content {
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.65fr) minmax(0, 1fr);
+    gap: 3rem;
+  }
+
+  .brandBlock {
+    grid-column: auto;
+  }
+
+  .logo {
+    width: 3.25rem;
+  }
+}
